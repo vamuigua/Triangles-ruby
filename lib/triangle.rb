@@ -16,6 +16,9 @@ class Triangle
         #checks if its a scalene
         elsif (@side_1 != @side_2) && (@side_1 != @side_3) && (@side_3 != @side_2)
             "scalene"
+        #checks id its not a triangle
+        elsif ((@side_1.+@side_2 <=@side3) || ((@side_2.+@side_3 <=@side1) || (@side_1.+@side_3 <=@side2)))
+            "Not a triangle"
         end
     end
 end
