@@ -6,11 +6,13 @@ class Triangle
     end
     
     #method for checking type of Triangle
-    
-    #chaecks if its equilateral
     define_method(:type?) do
+        #checks if its equilateral
         if ((@side_1.eql?(@side_2)) && (@side_1.eql?(@side_3)) && (@side_2.eql?(@side_3)))
-        "equilateral"
+            "equilateral"
+        #checks if its isosceles
+        elsif((@side_1.eql?(@side_2)) || (@side_1.eql?(@side_3)) || (@side_3.eql?(@side_2)))
+            "isosceles"
     end
 end
 end
