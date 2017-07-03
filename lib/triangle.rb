@@ -6,6 +6,8 @@ class Triangle
     end
     
     #method for checking type of Triangle
+    
+    #chaecks if its equilateral
     define_method(:type?) do
         if ((@side_1.eql?(@side_2)) && (@side_1.eql?(@side_3)) && (@side_2.eql?(@side_3)))
         "equilateral"
