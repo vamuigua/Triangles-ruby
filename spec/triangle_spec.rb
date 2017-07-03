@@ -15,5 +15,9 @@ require('rspec')
            test_scalene = Triangle.new(10,12,13)
            expect(test_scalene.type?()).to(eq("scalene"))
        end
+        it("it returns true if the sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side") do
+            test_nat = Triangle.new(1,5,2)
+            expect(test_nat.type?()).to(eq("Not a triangle"))
+        end
     end
   end
