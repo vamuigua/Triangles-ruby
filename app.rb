@@ -1,6 +1,6 @@
 require('sinatra')
 require('sinatra/reloader')
-#require('./lib/triangle')
+require('./lib/triangle')
 also_reload('lib/**/*.rb')
 require('pry')
 
@@ -19,5 +19,7 @@ get('/answer') do
     @side_1 = params.fetch('side_1')
     @side_2 = params.fetch('side_2')
     @side_3 = params.fetch('side_3')
+    
+#    @triangle_type = side_1.type(side_2,side_3) 
     erb(:answer)
 end
