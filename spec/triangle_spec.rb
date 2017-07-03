@@ -11,5 +11,9 @@ require('rspec')
           test_isosceles = Triangle.new(15,12,12)
           expect(test_isosceles.type?()).to(eq("isosceles"))
       end
+       it("returns true if neither of the sides are equal to each other") do
+           test_scalene = Triangle.new(10,12,13)
+           expect(test_scalene.type?()).to(eq("scalene"))
+       end
     end
   end
